@@ -1,21 +1,18 @@
 import Header from "@/app/_components/Header";
 import Footer from "@/app/_components/Footer";
-import { FiMapPin, FiPhone, FiMail } from "react-icons/fi"; // Using Feather Icons
+import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
 import MapView from "../_components/Map";
 
 export default function ContactPage() {
     return (
-        <div className="font-display bg--100 text-slate-900 pt-10">
+        <div className="font-display bg-[#f3f3f2] min-h-screen flex flex-col">
 
-            {/* Header Component */}
-            <Header />
-
-            <main className="flex-grow">
-                <div className="container mx-auto max-w-6xl px-4 sm:px-6 py-12 md:py-20">
+            <main className="flex-grow mt-25">
+                <div className="max-w-7xl mx-auto px-4 py-12 md:py-20">
 
                     {/* Heading */}
                     <div className="mb-12 text-center">
-                        <h1 className="text-4xl font-black tracking-tighter md:text-5xl">
+                        <h1 className="text-4xl font-bold text-[#4a4a43] tracking-tighter md:text-5xl">
                             Get in Touch Today
                         </h1>
                     </div>
@@ -23,10 +20,11 @@ export default function ContactPage() {
                     {/* 2-column layout */}
                     <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 pt-5">
 
+                        {/* Contact Information Card */}
                         <div className="rounded-xl border border-gray-200 p-6 bg-white">
-                            <h3 className="text-lg font-bold mb-4 text-black">Contact Information</h3>
+                            <h3 className="text-lg font-bold mb-4 text-[#4a4a43]">Contact Information</h3>
 
-                            <div className="space-y-4 text-slate-600">
+                            <div className="space-y-4 text-gray-500">
 
                                 <div className="flex items-start gap-4">
                                     <FiMapPin className="text-primary mt-1" size={24} />
@@ -46,16 +44,12 @@ export default function ContactPage() {
                             </div>
                         </div>
 
+                        {/* Map Component */}
                         <MapView/>
-        
 
                     </div>
                 </div>
             </main>
-
-            {/* Footer Component */}
-            {/* <Footer /> */}
-
         </div>
     );
 }
