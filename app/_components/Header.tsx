@@ -6,8 +6,8 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full py-6 px-8 flex justify-between items-center absolute top-0 left-0 z-50">
-      <h1 className="text-xl font-serif tracking-wide">PsychHelp</h1>
+    <header className="w-full py-6 px-6 md:px-20 max-w-7xl mx-auto flex flex-col md:flex-row gap-10 items-center top-0 left-0 z-50">
+      <h1 className="text-xl font-serif tracking-wide text-black">PsychHelp</h1>
 
       <nav className="hidden md:flex gap-10 text-gray-700">
         <a href="#" className="hover:text-black">Home</a>

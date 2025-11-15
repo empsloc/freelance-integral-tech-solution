@@ -1,6 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#4A4A43] text-white py-16 px-10 mt-20">
+    <div className="">
+    
+   <div className="w-full bg-[#4A4A43] text-white py-16 px-10 mt-auto">
+
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 
         <div>
@@ -24,6 +28,7 @@ export default function Footer() {
         </div>
 
       </div>
-    </footer>
+    </div>
+    </div>
   );
 }
