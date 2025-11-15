@@ -28,7 +28,7 @@ function Hero() {
         {/* Right Image */}
         <div className="flex-1 flex justify-center md:justify-end">
           <img
-            src="/therapist.png"
+            src="/HeroImage.png"
             alt="therapist"
             className="w-[300px] md:w-[450px] object-cover rounded"
           />
