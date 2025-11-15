@@ -47,7 +47,7 @@ export default function ContactPage() {
                         </div>
 
                         <MapView/>
-
+        
 
                     </div>
                 </div>
