@@ -8,6 +8,7 @@ import {
   FaNetworkWired, 
   FaComments 
 } from 'react-icons/fa';
+import { motion, AnimatePresence, Variants } from "framer-motion";
 
 const CoreServicesCards = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -71,49 +72,101 @@ const CoreServicesCards = () => {
     ? services 
     : services.filter(service => service.category === activeCategory);
 
+  // TS-safe variants
+  const containerVariant: Variants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.15,
+      }
+    }
+  };
+
+  const cardVariant: Variants = {
+    hidden: { opacity: 0, y: 40 },
+    show: { 
+      opacity: 1,
+      y: 0,
+      transition: { 
+        duration: 0.5,
+        ease: [0.16, 1, 0.3, 1]  
+      }
+    },
+    exit: { opacity: 0, y: 20 }
+  };
+
   return (
-    <section className="">
+    <section>
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-10 text-[#4a4a43]">
+        
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="text-3xl font-bold text-center mb-10 text-[#4a4a43]"
+        >
           Our Core Services
-        </h2>
+        </motion.h2>
 
         {/* Category Chips */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {serviceCategories.map((category) => (
-            <button
+            <motion.button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
+              whileTap={{ scale: 0.9 }}
               className={`px-4 py-1.5 cursor-pointer rounded-full font-medium transition-all text-sm ${
                 activeCategory === category.id
                   ? 'bg-primary text-black shadow-md border-primary'
-                  : 'bg-white text-[#4a4a43] border border-gray-300 hover:bg-gray-50 hover:border-gray-400 cursor-pointer'
+                  : 'bg-white text-[#4a4a43] border border-gray-300 hover:bg-gray-50 hover:border-gray-400'
               }`}
             >
               {category.label}
-            </button>
+            </motion.button>
           ))}
         </div>
 
-        {/* Services Grid - Centered like Flutter MainAxisAlignment.center */}
-        <div className="flex flex-wrap justify-center gap-8">
-          {filteredServices.map((service) => (
-            <div 
-              key={service.id} 
-              className="p-6 rounded-xl border border-gray-200 shadow-sm bg-white hover:shadow-xl hover:border-gray-400 transition-all duration-300 transform hover:-translate-y-1 w-full max-w-sm"
-            >
-              <div className="flex items-start space-x-3 mb-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold text-[#4a4a43]">{service.title}</h3>
-              </div>
-              <p className="text-gray-500 leading-relaxed">{service.description}</p>
-            </div>
-          ))}
-        </div>
+        {/* Services Grid */}
+        <motion.div 
+          variants={containerVariant}
+          initial="hidden"
+          animate="show"
+          className="flex flex-wrap justify-center gap-8"
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredServices.map((service) => (
+             <motion.div
+  key={service.id}
+  variants={cardVariant}
+  layout
+  exit="exit"
+  className="p-6 rounded-xl border border-gray-200 shadow-sm bg-white hover:shadow-xl hover:border-gray-400 transition-all duration-300 transform hover:-translate-y-1 w-full max-w-sm"
+>
+  <div className="flex items-start space-x-3 mb-4">
+    <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-[#4a4a43]">
+      {service.icon}
+    </div>
+    <h3 className="text-xl font-bold text-[#4a4a43]">{service.title}</h3>
+  </div>
 
-        {/* Empty State */}
+  <p className="text-gray-500 leading-relaxed">{service.description}</p>
+
+  {/* Read More Button */}
+  <button
+    className="mt-4 flex items-center gap-2 text-sm font-medium text-[#4a4a43] hover:text-black transition-all group"
+  >
+    Read More
+    <span className="transform transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </button>
+</motion.div>
+
+            ))}
+          </AnimatePresence>
+        </motion.div>
+
         {filteredServices.length === 0 && (
           <div className="text-center py-10">
             <p className="text-gray-500 text-lg">No services found in this category.</p>

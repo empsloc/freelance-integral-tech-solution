@@ -1,14 +1,16 @@
+"use client";
+
 import Header from "@/app/_components/Header";
 import Footer from "@/app/_components/Footer";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
 import MapView from "../_components/Map";
+import { motion } from "framer-motion";
 
 export default function ContactPage() {
     return (
-        <div className="font-display bg-[#f3f3f2] min-h-screen flex flex-col">
+        <div className="font-display bg-[#f3f3f2] min-h-screen flex flex-col pt-24">
 
             {/* Header Component */}
-          
 
             <main className="flex-grow">
                 <div className="container mx-auto max-w-6xl px-4 sm:px-6 py-12 md:py-20">
@@ -23,8 +25,14 @@ export default function ContactPage() {
                     {/* 2-column layout */}
                     <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 pt-5">
 
-                        {/* Contact Information Card */}
-                        <div className="rounded-xl border border-gray-200 p-6 bg-white">
+                        {/* Contact Information Card (slide from left) */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -60 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.7, ease: "easeOut" }}
+                            viewport={{ once: true }}
+                            className="rounded-xl border border-gray-200 p-6 bg-white"
+                        >
                             <h3 className="text-lg font-bold mb-4 text-[#4a4a43]">Contact Information</h3>
 
                             <div className="space-y-4 text-gray-500">
@@ -45,10 +53,17 @@ export default function ContactPage() {
                                 </div>
 
                             </div>
-                        </div>
+                        </motion.div>
 
-                        {/* Map Component */}
-                        <MapView/>
+                        {/* Map Component (slide from right) */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 60 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.7, ease: "easeOut" }}
+                            viewport={{ once: true }}
+                        >
+                            <MapView />
+                        </motion.div>
 
                     </div>
                 </div>

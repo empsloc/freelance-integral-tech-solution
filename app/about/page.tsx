@@ -1,18 +1,17 @@
 "use client";
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
     FaShieldAlt,
     FaLightbulb,
     FaUsers,
     FaLinkedin,
-    FaTwitter,
     FaUserTie,
     FaComments,
     FaClock,
     FaExpand,
     FaHeadset
 } from 'react-icons/fa';
-
 
 const AboutPage = () => {
     const features = [
@@ -53,24 +52,34 @@ const AboutPage = () => {
             icon: <FaHeadset className="w-6 h-6" />
         }
     ];
+
     return (
-        <div className="min-h-screen ">
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ 
+                duration: 0.8,
+                ease: [0.25, 0.46, 0.45, 0.94] // cubic-bezier equivalent for "easeOutQuad"
+            }}
+            className="min-h-screen bg-[#f3f3f2]"
+        >
             <div className="max-w-[1280px] mx-auto px-4 md:px-10 lg:px-20 xl:px-40 pt-24">
 
                 {/* Hero Section */}
-                    <section className="my-5">
-                        <div className="min-h-[400px] flex flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-4"
-                            style={{ backgroundImage: 'linear-gradient(rgba(16, 25, 34, 0.6) 0%, rgba(16, 25, 34, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-WpGh7LP0sD1AkniH5KYpdPNRdgjJgRGJh-3Woi0rYJYus8ylsTN_PMqW44hrpHE6tce3T6EGzZbrPQcwpi72R9CwiG-8zam0zQztyxZ_oOLNX5c57d_w0Tf4ckDd-c6ZjEBm1iIXPvtE0s_lPtkD_FVhEaA8FRNDlrnROFEfC_Z3R-bhSGVg-A-wQtA87OB-YMkquY7U4lLFnj2w2JMuNCuGkfSYalnk22UgZbgNJYyEKkaMMcMG8_qVMHWg9jSL9ugNPVOstLQ")' }}>
-                            <div className="flex flex-col gap-2 text-center">
-                                <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl">
-                                    Driving Innovation Through Technology
-                                </h1>
-                                <h2 className="text-gray-200 text-sm font-normal leading-normal md:text-base max-w-2xl mx-auto">
-                                    We are a team of passionate experts dedicated to providing cutting-edge IT solutions that empower your business to thrive in the digital age.
-                                </h2>
-                            </div>
+                <section className="my-5">
+                    <div className="min-h-[400px] flex flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-4"
+                        style={{ backgroundImage: 'linear-gradient(rgba(16, 25, 34, 0.6) 0%, rgba(16, 25, 34, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-WpGh7LP0sD1AkniH5KYpdPNRdgjJgRGJh-3Woi0rYJYus8ylsTN_PMqW44hrpHE6tce3T6EGzZbrPQcwpi72R9CwiG-8zam0zQztyxZ_oOLNX5c57d_w0Tf4ckDd-c6ZjEBm1iIXPvtE0s_lPtkD_FVhEaA8FRNDlrnROFEfC_Z3R-bhSGVg-A-wQtA87OB-YMkquY7U4lLFnj2w2JMuNCuGkfSYalnk22UgZbgNJYyEKkaMMcMG8_qVMHWg9jSL9ugNPVOstLQ")' }}>
+                        <div className="flex flex-col gap-2 text-center">
+                            <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl">
+                                Driving Innovation Through Technology
+                            </h1>
+                            <h2 className="text-gray-200 text-sm font-normal leading-normal md:text-base max-w-2xl mx-auto">
+                                We are a team of passionate experts dedicated to providing cutting-edge IT solutions that empower your business to thrive in the digital age.
+                            </h2>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
                 {/* Why choose us */}
                 <section className="py-16">
@@ -105,7 +114,7 @@ const AboutPage = () => {
                                     </div>
                                 </div>
                             ))}
-                        </div>
+                        </div> 
                     </div>
                 </section>
 
@@ -142,7 +151,7 @@ const AboutPage = () => {
                             alt="Professional headshot of Jane Smith"
                         />
                         <h3 className="text-lg font-bold text-[#4a4a43]">Jane Smith</h3>
-                        <p className="text-sm text-[#6d6d66]font-medium">Chief Technology Officer</p>
+                        <p className="text-sm text-[#6d6d66] font-medium">Chief Technology Officer</p>
                         <p className="text-sm text-gray-500 mt-2">Jane is a visionary technologist who spearheads our research and development, ensuring we stay at the forefront of the industry.</p>
                         <div className="flex gap-4 mt-4 text-gray-500">
                             <a className="hover:text-primary" href="#">
@@ -174,15 +183,19 @@ const AboutPage = () => {
                     <h2 className="text-3xl font-bold text-[#4a4a43] mb-2">Ready to Start Your Project?</h2>
                     <p className="text-gray-500 mb-6 max-w-xl mx-auto">Let's work together to build the future of your business. Contact us to learn how our solutions can help you achieve your goals.</p>
                     <Link href="/contact">
-                    <button className="bg-[#4a4a43] flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] mx-auto hover:bg-primary/90 transition-colors">
-                        <span className="truncate ">Get in Touch</span>
-                    </button>
+                        <button className="bg-[#4a4a43] flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 text-white text-base font-bold leading-normal tracking-[0.015em] mx-auto hover:bg-[#3a3a33] transition-colors">
+                            <span className="truncate">Get in Touch</span>
+                        </button>
                     </Link>
                 </section>
 
             </div>
-        </div>
+        </motion.div>
     );
 };
 
 export default AboutPage;
+
+
+
+
