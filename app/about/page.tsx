@@ -58,19 +58,19 @@ const AboutPage = () => {
             <div className="max-w-[1280px] mx-auto px-4 md:px-10 lg:px-20 xl:px-40 pt-24">
 
                 {/* Hero Section */}
-                <section className="my-5">
-                    <div className="min-h-[400px] flex flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-4"
-                        style={{ backgroundImage: 'linear-gradient(rgba(16, 25, 34, 0.6) 0%, rgba(16, 25, 34, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-WpGh7LP0sD1AkniH5KYpdPNRdgjJgRGJh-3Woi0rYJYus8ylsTN_PMqW44hrpHE6tce3T6EGzZbrPQcwpi72R9CwiG-8zam0zQztyxZ_oOLNX5c57d_w0Tf4ckDd-c6ZjEBm1iIXPvtE0s_lPtkD_FVhEaA8FRNDlrnROFEfC_Z3R-bhSGVg-A-wQtA87OB-YMkquY7U4lLFnj2w2JMuNCuGkfSYalnk22UgZbgNJYyEKkaMMcMG8_qVMHWg9jSL9ugNPVOstLQ")' }}>
-                        <div className="flex flex-col gap-2 text-center">
-                            <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl">
-                                Driving Innovation Through Technology
-                            </h1>
-                            <h2 className="text-gray-200 text-sm font-normal leading-normal md:text-base max-w-2xl mx-auto">
-                                We are a team of passionate experts dedicated to providing cutting-edge IT solutions that empower your business to thrive in the digital age.
-                            </h2>
+                    <section className="my-5">
+                        <div className="min-h-[400px] flex flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-4"
+                            style={{ backgroundImage: 'linear-gradient(rgba(16, 25, 34, 0.6) 0%, rgba(16, 25, 34, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-WpGh7LP0sD1AkniH5KYpdPNRdgjJgRGJh-3Woi0rYJYus8ylsTN_PMqW44hrpHE6tce3T6EGzZbrPQcwpi72R9CwiG-8zam0zQztyxZ_oOLNX5c57d_w0Tf4ckDd-c6ZjEBm1iIXPvtE0s_lPtkD_FVhEaA8FRNDlrnROFEfC_Z3R-bhSGVg-A-wQtA87OB-YMkquY7U4lLFnj2w2JMuNCuGkfSYalnk22UgZbgNJYyEKkaMMcMG8_qVMHWg9jSL9ugNPVOstLQ")' }}>
+                            <div className="flex flex-col gap-2 text-center">
+                                <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl">
+                                    Driving Innovation Through Technology
+                                </h1>
+                                <h2 className="text-gray-200 text-sm font-normal leading-normal md:text-base max-w-2xl mx-auto">
+                                    We are a team of passionate experts dedicated to providing cutting-edge IT solutions that empower your business to thrive in the digital age.
+                                </h2>
+                            </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
                 {/* Why choose us */}
                 <section className="py-16">

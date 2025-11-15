@@ -27,7 +27,11 @@ export default function Header() {
 
   return (
     <header
+<<<<<<< Updated upstream
       className={`fixed top-0 left-0 py-3 w-full z-50 transition-all duration-300 ${
+=======
+      className={`fixed top-0 left-0 w-full py-3 z-50 transition-all duration-300 ${
+>>>>>>> Stashed changes
         scrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
