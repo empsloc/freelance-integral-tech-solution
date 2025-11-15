@@ -16,9 +16,9 @@ function Hero() {
     }`;
 
   return (
-    <div className='w-full bg-gradient-to-tl from-[#f3f3f2] via-[#ffffff] to-[#f3f3f2] min-h-screen'>
-      <Header/>
-      <section className="pt-40 pb-20 px-6 md:px-20 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    <div className='w-full bg-gradient-to-tl from-[#a5a7a6] via-[#d0d2d1] to-[#ffffff] min-h-screen'>
+     {/* <Header/> */}
+    <section className="pt-40 pb-20 px-6 md:px-20 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
 
         {/* Left Content */}
         <div className="flex-1 text-center md:text-left">

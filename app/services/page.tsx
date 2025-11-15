@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function ServicesPage() {
   return (
     <div className="bg--200 min-h-screen  ">
-      <Header />
+     
 
       <main className="flex-1 mx-auto max-w-6xl px-4 sm:px-6 pt-8 md:pt-8">
         <div className="">

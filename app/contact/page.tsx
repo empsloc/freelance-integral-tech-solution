@@ -7,8 +7,11 @@ export default function ContactPage() {
     return (
         <div className="font-display bg-[#f3f3f2] min-h-screen flex flex-col">
 
-            <main className="flex-grow mt-25">
-                <div className="max-w-7xl mx-auto px-4 py-12 md:py-20">
+            {/* Header Component */}
+          
+
+            <main className="flex-grow">
+                <div className="container mx-auto max-w-6xl px-4 sm:px-6 py-12 md:py-20">
 
                     {/* Heading */}
                     <div className="mb-12 text-center">
