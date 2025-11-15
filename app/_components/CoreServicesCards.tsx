@@ -72,7 +72,7 @@ const CoreServicesCards = () => {
     : services.filter(service => service.category === activeCategory);
 
   return (
-    <section className="py-16">
+    <section className="">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-10 text-[#4a4a43]">
           Our Core Services
@@ -84,10 +84,10 @@ const CoreServicesCards = () => {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-4 py-1.5 rounded-full font-medium transition-all text-sm ${
+              className={`px-4 py-1.5 cursor-pointer rounded-full font-medium transition-all text-sm ${
                 activeCategory === category.id
-                  ? 'bg-primary text-white shadow-md border-2 border-primary'
-                  : 'bg-white text-[#4a4a43] border border-gray-300 hover:bg-gray-50 hover:border-gray-400'
+                  ? 'bg-primary text-black shadow-md border-primary'
+                  : 'bg-white text-[#4a4a43] border border-gray-300 hover:bg-gray-50 hover:border-gray-400 cursor-pointer'
               }`}
             >
               {category.label}

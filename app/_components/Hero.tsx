@@ -1,28 +1,21 @@
-import Image from 'next/image';
-import React from 'react'
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { FiChevronDown } from "react-icons/fi";
+import Header from "./Header";
 function Hero() {
+   const [open, setOpen] = useState(false);
+  const pathname = usePathname(); // get current route
+
+  const linkClass = (path: string) =>
+    `hover:text-black pb-1 ${
+      pathname === path ? "border-b-2 border-black font-semibold text-black" : ""
+    }`;
   return (
     <div className='w-full bg-gradient-to-tl from-[#a5a7a6] via-[#d0d2d1] to-[#ffffff] min-h-screen'>
-      <header className="w-full py-6 px-6 md:px-20 max-w-7xl mx-auto flex flex-col md:flex-row gap-10 items-center top-0 left-0 z-50">
-            <Image height={100} alt='logo' width={100} src={"/logo.png"} className="text-xl font-serif tracking-wide text-black" />
-      
-            <nav className="hidden md:flex gap-10 text-gray-700">
-              <a href="#" className="hover:text-black">Home</a>
-              <a href="#" className="hover:text-black">About</a>
-              <a href="#" className="hover:text-black">Services</a>
-
-      
-              
-      
-              <a href="#" className="hover:text-black">Contact</a>
-            </nav>
-      
-            {/* Mobile */}
-            <div className="md:hidden text-gray-700">
-              ☰
-            </div>
-          </header>
+     <Header/>
     <section className="pt-40 pb-20 px-6 md:px-20 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
 
         {/* Left Content */}
@@ -40,10 +33,11 @@ function Hero() {
             and relationship therapy. My mission is to help people live happier,
             more fulfilling lives.
           </p>
-
+            <Link href="/about">
           <button className="mt-8 border cursor-pointer border-gray-700 px-6 py-2 text-gray-600 text-sm tracking-wide hover:bg-gray-900 hover:text-white transition rounded-xl">
             ABOUT ME
           </button>
+          </Link>
         </div>
 
         {/* Right Image */}

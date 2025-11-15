@@ -5,7 +5,7 @@ import MapView from "../_components/Map";
 
 export default function ContactPage() {
     return (
-        <div className="font-display bg-gray-100 text-slate-900">
+        <div className="font-display bg--100 text-slate-900 pt-10">
 
             {/* Header Component */}
             <Header />
@@ -21,7 +21,7 @@ export default function ContactPage() {
                     </div>
 
                     {/* 2-column layout */}
-                    <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+                    <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 pt-5">
 
                         <div className="rounded-xl border border-gray-200 p-6 bg-white">
                             <h3 className="text-lg font-bold mb-4 text-black">Contact Information</h3>
@@ -54,7 +54,7 @@ export default function ContactPage() {
             </main>
 
             {/* Footer Component */}
-            <Footer />
+            {/* <Footer /> */}
 
         </div>
     );

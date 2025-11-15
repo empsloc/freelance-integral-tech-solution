@@ -5,7 +5,7 @@ export default function Footer() {
    <div className="w-full bg-[#4A4A43] text-white py-16 px-10 mt-auto">
 
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 
         <div>
           <h2 className="text-3xl font-serif mb-2">PsychHelp</h2>
