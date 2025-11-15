@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import {
     FaShieldAlt,
     FaLightbulb,
@@ -53,8 +54,8 @@ const AboutPage = () => {
         }
     ];
     return (
-        <div className="min-h-screen bg-[#f3f3f2]">
-            <div className="max-w-[1280px] mx-auto px-4 md:px-10 lg:px-20 xl:px-40 py-5">
+        <div className="min-h-screen ">
+            <div className="max-w-[1280px] mx-auto px-4 md:px-10 lg:px-20 xl:px-40 pt-24">
 
                 {/* Hero Section */}
                 <section className="my-5">
@@ -89,7 +90,7 @@ const AboutPage = () => {
                                     key={feature.id}
                                     className="p-6 rounded-xl border border-gray-200 bg-white hover:bg-[#f3f3f2] hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
                                 >
-                                    <div className="flex items-start space-x-4">
+                                    <div className="flex flex-col items-start space-x-4">
                                         <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-[#4a4a43]">
                                             {feature.icon}
                                         </div>
@@ -124,7 +125,7 @@ const AboutPage = () => {
                             alt="Professional headshot of John Doe"
                         />
                         <h3 className="text-lg font-bold text-[#4a4a43]">John Doe</h3>
-                        <p className="text-sm text-primary font-medium">Chief Executive Officer</p>
+                        <p className="text-sm text-[#6d6d66] font-medium">Chief Executive Officer</p>
                         <p className="text-sm text-gray-500 mt-2">John has over 20 years of experience in the tech industry, leading our company with a vision for innovation and excellence.</p>
                         <div className="flex gap-4 mt-4 text-gray-500">
                             <a className="hover:text-primary" href="#">
@@ -141,7 +142,7 @@ const AboutPage = () => {
                             alt="Professional headshot of Jane Smith"
                         />
                         <h3 className="text-lg font-bold text-[#4a4a43]">Jane Smith</h3>
-                        <p className="text-sm text-primary font-medium">Chief Technology Officer</p>
+                        <p className="text-sm text-[#6d6d66]font-medium">Chief Technology Officer</p>
                         <p className="text-sm text-gray-500 mt-2">Jane is a visionary technologist who spearheads our research and development, ensuring we stay at the forefront of the industry.</p>
                         <div className="flex gap-4 mt-4 text-gray-500">
                             <a className="hover:text-primary" href="#">
@@ -158,7 +159,7 @@ const AboutPage = () => {
                             alt="Professional headshot of Mike Johnson"
                         />
                         <h3 className="text-lg font-bold text-[#4a4a43]">Mike Johnson</h3>
-                        <p className="text-sm text-primary font-medium">Head of Operations</p>
+                        <p className="text-sm text-[#6d6d66] font-medium">Head of Operations</p>
                         <p className="text-sm text-gray-500 mt-2">Mike ensures that our projects are delivered on time and to the highest standard, managing our talented team of engineers.</p>
                         <div className="flex gap-4 mt-4 text-gray-500">
                             <a className="hover:text-primary" href="#">
@@ -172,9 +173,11 @@ const AboutPage = () => {
                 <section className="my-16 p-10 bg-primary/10 rounded-xl text-center">
                     <h2 className="text-3xl font-bold text-[#4a4a43] mb-2">Ready to Start Your Project?</h2>
                     <p className="text-gray-500 mb-6 max-w-xl mx-auto">Let's work together to build the future of your business. Contact us to learn how our solutions can help you achieve your goals.</p>
-                    <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] mx-auto hover:bg-primary/90 transition-colors">
-                        <span className="truncate">Get in Touch</span>
+                    <Link href="/contact">
+                    <button className="bg-[#4a4a43] flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] mx-auto hover:bg-primary/90 transition-colors">
+                        <span className="truncate ">Get in Touch</span>
                     </button>
+                    </Link>
                 </section>
 
             </div>
