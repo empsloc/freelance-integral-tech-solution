@@ -2,6 +2,7 @@
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
+import ContactForm from "../_components/ContactForm";
 
 const ContactPage = () => {
   return (
@@ -28,56 +29,7 @@ const ContactPage = () => {
           {/* Left Column: Contact Form */}
           <div className="grid grid-cols-1 gap-12 md:grid-cols-1 md:gap-16 bg--300">
             {/* Left Column: Contact Form */}
-            <div className="flex flex-col gap-6 bg--300">
-              <form className="space-y-6">
-                <label className="flex flex-col w-full">
-                  <p className="text-sm font-medium text-[#4a4a43] pb-2">
-                    Full Name
-                  </p>
-                  <Input
-                    className="text-[#4a4a43] h-12 bg-white  border-gray-300 rounded-lg 
-             placeholder:text-gray-400 text-base font-normal"
-                    placeholder="Enter your full name"
-                  />
-                </label>
-                 <label className="flex flex-col w-full">
-                  <p className="text-sm font-medium text-[#4a4a43] pb-2">
-                    Mobile
-                  </p>
-                  <Input
-                    className="text-[#4a4a43] h-12 bg-white  border-gray-300 rounded-lg 
-             placeholder:text-gray-400 text-base font-normal"
-                    placeholder="Enter your mobile number"
-                  />
-                </label>
-
-                <label className="flex flex-col w-full">
-                  <p className="text-sm font-medium text-[#4a4a43] pb-2">
-                     Email
-                  </p>
-                  <Input
-                    className="text-[#4a4a43] h-12 bg-white  border-gray-300 rounded-lg
-             placeholder:text-gray-400 text-base font-normal"
-                    placeholder="you@gmail.com"
-                  />
-                </label>
-
-                <label className="flex flex-col w-full">
-                  <p className="text-sm font-medium text-[#4a4a43] pb-2">
-                    Message
-                  </p>
-                  <textarea
-                    className="text-[#4a4a43] bg-white  border-gray-300 rounded-lg 
-             min-h-36 p-4 placeholder:text-gray-400 text-base font-normal"
-                    placeholder="Enter your message here"
-                  />
-                </label>
-
-                <button className="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#4a4a43] text-white text-base font-bold shadow-lg hover:bg-[#3a3a33] transition-colors">
-                  <span className="truncate">Send Message</span>
-                </button>
-              </form>
-            </div>
+           <ContactForm/>
           </div>
 
           {/* Right Column: Contact Info & Map */}
