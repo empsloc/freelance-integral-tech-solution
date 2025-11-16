@@ -64,7 +64,7 @@ const AboutPage = () => {
             }}
             className="min-h-screen bg-[#f3f3f2]"
         >
-            <div className="max-w-[1280px] mx-auto px-4 md:px-10 lg:px-20 xl:px-40 pt-24">
+            <div className="max-w-7xl mx-auto px-4 md:px-10 lg:px-20  pt-24">
 
                 {/* Hero Section */}
                 <section className="my-5">
@@ -89,7 +89,7 @@ const AboutPage = () => {
                                 Why Choose Us
                             </h2>
                             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-                                We are committed to delivering exceptional IT solutions that drive your business forward
+                                Our team blends strategy, engineering, and design to deliver scalable and future-ready solutions.
                             </p>
                         </div>
 

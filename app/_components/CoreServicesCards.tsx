@@ -8,7 +8,7 @@ import {
   FaNetworkWired, 
   FaComments 
 } from 'react-icons/fa';
-import { motion, AnimatePresence, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 const CoreServicesCards = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -26,29 +26,29 @@ const CoreServicesCards = () => {
   const services = [
     {
       id: 1,
-      title: 'Cloud Solutions',
-      description: 'Manage infrastructure effortlessly with our cloud deployments, optimization, and monitoring solutions.',
+      title: 'Cloud & DevOps',
+      description: 'Cloud migration, CI/CD pipelines, infrastructure automation, monitoring & optimization.',
       category: 'cloud',
       icon: <FaCloud className="w-5 h-5" />
     },
     {
       id: 2,
       title: 'Cybersecurity',
-      description: 'Protect your business with advanced threat detection, risk management, and continuous monitoring.',
+      description: 'Security assessments, compliance, data protection, and vulnerability management.',
       category: 'security',
       icon: <FaShieldAlt className="w-5 h-5" />
     },
     {
       id: 3,
       title: 'Managed IT Services',
-      description: 'Let our team handle everything from infrastructure to user support.',
+      description: 'Complete IT support, monitoring, maintenance, and helpdesk services.',
       category: 'managed',
       icon: <FaCogs className="w-5 h-5" />
     },
     {
       id: 4,
-      title: 'Software Development',
-      description: 'From mobile apps to full enterprise systems — we build scalable and maintainable solutions.',
+      title: 'Data & Analytics',
+      description: 'BI dashboards, data engineering, predictive analytics, AI integrations.',
       category: 'development',
       icon: <FaCode className="w-5 h-5" />
     },
@@ -62,7 +62,7 @@ const CoreServicesCards = () => {
     {
       id: 6,
       title: 'IT Consulting',
-      description: 'Expert advice to help you modernize operations and adopt the right technologies.',
+      description: 'Technology roadmap, architecture consulting, digital transformation strategies.',
       category: 'consulting',
       icon: <FaComments className="w-5 h-5" />
     }
@@ -72,29 +72,6 @@ const CoreServicesCards = () => {
     ? services 
     : services.filter(service => service.category === activeCategory);
 
-  // TS-safe variants
-  const containerVariant: Variants = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.15,
-      }
-    }
-  };
-
-  const cardVariant: Variants = {
-    hidden: { opacity: 0, y: 40 },
-    show: { 
-      opacity: 1,
-      y: 0,
-      transition: { 
-        duration: 0.5,
-        ease: [0.16, 1, 0.3, 1]  
-      }
-    },
-    exit: { opacity: 0, y: 20 }
-  };
-
   return (
     <section>
       <div className="max-w-7xl mx-auto px-4">
@@ -103,7 +80,7 @@ const CoreServicesCards = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.7 }}
           className="text-3xl font-bold text-center mb-10 text-[#4a4a43]"
         >
           Our Core Services
@@ -127,45 +104,33 @@ const CoreServicesCards = () => {
           ))}
         </div>
 
-        {/* Services Grid */}
-        <motion.div 
-          variants={containerVariant}
-          initial="hidden"
-          animate="show"
-          className="flex flex-wrap justify-center gap-8"
-        >
-          <AnimatePresence mode="popLayout">
-            {filteredServices.map((service) => (
-             <motion.div
-  key={service.id}
-  variants={cardVariant}
-  layout
-  exit="exit"
-  className="p-6 rounded-xl border border-gray-200 shadow-sm bg-white hover:shadow-xl hover:border-gray-400 transition-all duration-300 transform hover:-translate-y-1 w-full max-w-sm"
->
-  <div className="flex items-start space-x-3 mb-4">
-    <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-[#4a4a43]">
-      {service.icon}
-    </div>
-    <h3 className="text-xl font-bold text-[#4a4a43]">{service.title}</h3>
-  </div>
+        {/* Services Grid (NO ANIMATION NOW) */}
+        <div className="flex flex-wrap justify-center gap-8">
+          {filteredServices.map((service) => (
+            <div
+              key={service.id}
+              className="p-6 rounded-xl border border-gray-200 shadow-sm bg-white hover:shadow-xl hover:border-gray-400 transition-all duration-300 transform hover:-translate-y-1 w-full max-w-sm"
+            >
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-[#4a4a43]">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-bold text-[#4a4a43]">{service.title}</h3>
+              </div>
 
-  <p className="text-gray-500 leading-relaxed">{service.description}</p>
+              <p className="text-gray-500 leading-relaxed">{service.description}</p>
 
-  {/* Read More Button */}
-  <button
-    className="mt-4 flex items-center gap-2 text-sm font-medium text-[#4a4a43] hover:text-black transition-all group"
-  >
-    Read More
-    <span className="transform transition-transform duration-300 group-hover:translate-x-1">
-      →
-    </span>
-  </button>
-</motion.div>
-
-            ))}
-          </AnimatePresence>
-        </motion.div>
+              <button
+                className="mt-4 flex items-center gap-2 text-sm font-medium text-[#4a4a43] hover:text-black transition-all group"
+              >
+                Read More
+                <span className="transform transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </button>
+            </div>
+          ))}
+        </div>
 
         {filteredServices.length === 0 && (
           <div className="text-center py-10">

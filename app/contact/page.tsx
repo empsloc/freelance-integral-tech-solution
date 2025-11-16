@@ -25,12 +25,11 @@ export default function ContactPage() {
                     {/* 2-column layout */}
                     <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 pt-5">
 
-                        {/* Contact Information Card (slide from left) */}
+                        {/* Contact Information Card */}
                         <motion.div
                             initial={{ opacity: 0, x: -60 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.7, ease: "easeOut" }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
                             className="rounded-xl border border-gray-200 p-6 bg-white"
                         >
                             <h3 className="text-lg font-bold mb-4 text-[#4a4a43]">Contact Information</h3>
@@ -55,12 +54,11 @@ export default function ContactPage() {
                             </div>
                         </motion.div>
 
-                        {/* Map Component (slide from right) */}
+                        {/* Map Component */}
                         <motion.div
                             initial={{ opacity: 0, x: 60 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.7, ease: "easeOut" }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
                         >
                             <MapView />
                         </motion.div>

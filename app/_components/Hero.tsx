@@ -21,7 +21,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Psychotherapist
+           IT Solutions
           </motion.p>
 
           <motion.h1
@@ -30,7 +30,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Ester S.<br />Dossenbach
+           Empowering Businesses<br />with Smart IT Solutions
           </motion.h1>
 
           <motion.p
@@ -39,9 +39,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            I'm a board-certified psychotherapist specializing in individual
-            and relationship therapy. My mission is to help people live happier,
-            more fulfilling lives.
+           We design, build, and support digital systems that accelerate your growth and simplify your technology challenges.
           </motion.p>
 
           <motion.div

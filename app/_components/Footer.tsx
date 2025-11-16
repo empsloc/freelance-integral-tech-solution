@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 
         <div>
-          <h2 className="text-3xl font-serif mb-2">PsychHelp</h2>
-          <p className="text-sm opacity-80">Ester S. Dossenbach, therapist</p>
+          <h2 className="text-3xl font-serif mb-2">Integral Tech Solutions</h2>
+          <p className="text-sm opacity-80">Empowering Businesses</p>
         </div>
 
         <div>
