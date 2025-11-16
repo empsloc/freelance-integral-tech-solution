@@ -50,7 +50,7 @@ export default function ServicesPage() {
               <Image
                 height={500}
                 width={800}
-                src="/services.png"
+                src="/support2.png"
                 alt="IT Services"
                 className="w-full h-auto bg--200 "
               />

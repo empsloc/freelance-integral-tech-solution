@@ -43,20 +43,20 @@ const ContactPage = () => {
                 <div className="flex items-start gap-4">
                   <FiMapPin className="text-primary mt-1" size={24} />
                   <p>
-                    123 Tech Avenue, Silicon Valley,
+                    Sector 28/ Plot 299 Pradhikaran 
                     <br />
-                    CA 94043, USA
+                    Nigdi Pune -411044
                   </p>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <FiPhone className="text-primary mt-1" size={24} />
-                  <p>(123) 456-7890</p>
+                  <p>+91 9850799482</p>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <FiMail className="text-primary mt-1" size={24} />
-                  <p>contact@itsolutionsinc.com</p>
+                  <p>integraltechsolutions.it@gmail.com</p>
                 </div>
               </div>
             </div>

@@ -20,7 +20,7 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-serif mb-3">Contacts</h3>
           <a href="mailto:email@example.com" className="underline block">
-            intergaltech.solutions@gmail.com
+            integraltechsolutions.it@gmail.com
           </a>
           {/* <a href="tel:+33445677654" className="underline block mt-1">
             9850799482
