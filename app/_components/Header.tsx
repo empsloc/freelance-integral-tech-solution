@@ -30,11 +30,11 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full py-3 z-50 transition-all duration-300 ${
+      className={`fixed  top-0 left-0 w-full py-3 z-50 transition-all duration-300 ${
         scrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="px-6 md:px-20 max-w-7xl msx-auto flex  items-center gap-10">
+      <div className="px-6 md:px-20 max-w-7xl mx-auto flex  items-center gap-10">
 
         {/* Logo */}
         <div className="flex items-center gap-4">
