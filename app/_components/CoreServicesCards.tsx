@@ -95,7 +95,7 @@ const CoreServicesCards = () => {
               whileTap={{ scale: 0.9 }}
               className={`px-4 py-1.5 cursor-pointer rounded-full font-medium transition-all text-sm ${
                 activeCategory === category.id
-                  ? 'bg-primary text-black shadow-md border-primary'
+                  ? 'bg-[#4a4a43] text-white shadow-md border-primary'
                   : 'bg-white text-[#4a4a43] border border-gray-300 hover:bg-gray-50 hover:border-gray-400'
               }`}
             >
@@ -109,7 +109,7 @@ const CoreServicesCards = () => {
           {filteredServices.map((service) => (
             <div
               key={service.id}
-              className="p-6 rounded-xl border border-gray-200 shadow-sm bg-white hover:shadow-xl hover:border-gray-400 transition-all duration-300 transform hover:-translate-y-1 w-full max-w-sm"
+              className="p-6 rounded-xl border border-gray-200 shadow-sm bg-white hover:shadow-xl hover:border-gray-400 hover:border-2 transition-all duration-300 transform hover:-translate-y-1 w-full max-w-sm"
             >
               <div className="flex items-center space-x-3 mb-4">
                 <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-[#4a4a43]">
@@ -121,7 +121,7 @@ const CoreServicesCards = () => {
               <p className="text-gray-500 leading-relaxed">{service.description}</p>
 
               <button
-                className="mt-4 flex items-center gap-2 text-sm font-medium text-[#4a4a43] hover:text-black transition-all group"
+                className="mt-4 flex items-center gap-2 text-sm font-medium text-[#4a4a43] hover:text-blue-500 transition-all group"
               >
                 Read More
                 <span className="transform transition-transform duration-300 group-hover:translate-x-1">

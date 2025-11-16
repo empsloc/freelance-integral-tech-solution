@@ -16,16 +16,16 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.p
-            className="uppercase tracking-widest text-sm text-gray-600 mb-4"
+            className="uppercase tracking-widest  text-black mb-4 text-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-           IT Solutions
+           Integral Tech Solutions
           </motion.p>
 
           <motion.h1
-            className="text-5xl md:text-6xl font-serif text-gray-800"
+            className="text-4xl md:text-5xl font-serif text-gray-700"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
@@ -49,7 +49,7 @@ export default function Hero() {
           >
             <Link href="/about">
               <button className="mt-8 border cursor-pointer border-gray-700 px-6 py-2 text-gray-600 text-sm tracking-wide hover:bg-gray-900 hover:text-white transition rounded-xl">
-                ABOUT ME
+                ABOUT US
               </button>
             </Link>
           </motion.div>
@@ -63,7 +63,7 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
         >
           <img
-            src="/HeroImage.png"
+            src="/HomeScreenImage.png"
             alt="therapist"
             className="w-[300px] md:w-[450px] object-cover rounded"
           />

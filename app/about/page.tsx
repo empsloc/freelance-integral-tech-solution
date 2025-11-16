@@ -97,10 +97,10 @@ const AboutPage = () => {
                             {features.map((feature) => (
                                 <div
                                     key={feature.id}
-                                    className="p-6 rounded-xl border border-gray-200 bg-white hover:bg-[#f3f3f2] hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                                    className="p-6 rounded-xl border border-gray-200 bg-white hover:bg-[#f3f3f2] hover:shadow-lg hover:border-gray-500 transition-all duration-300 transform hover:-translate-y-1"
                                 >
                                     <div className="flex flex-col items-start space-x-4">
-                                        <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-[#4a4a43]">
+                                        <div className="flex-shrink-0 w-12 h-12  rounded-lg flex items-center justify-center text-[#4a4a43]">
                                             {feature.icon}
                                         </div>
                                         <div className="flex-1">
@@ -179,12 +179,12 @@ const AboutPage = () => {
                 </section>
 
                 {/* CTA Section */}
-                <section className="my-16 p-10 bg-primary/10 rounded-xl text-center">
-                    <h2 className="text-3xl font-bold text-[#4a4a43] mb-2">Ready to Start Your Project?</h2>
+                <section className="mt-16 pb-16 p-10  rounded-xl text-center">
+                    <h2 className="text-3xl font-bold text-[#4a4a43] mb-2">Ready to Work With Us?</h2>
                     <p className="text-gray-500 mb-6 max-w-xl mx-auto">Let's work together to build the future of your business. Contact us to learn how our solutions can help you achieve your goals.</p>
-                    <Link href="/contact">
+                    <Link href="/services">
                         <button className="bg-[#4a4a43] flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 text-white text-base font-bold leading-normal tracking-[0.015em] mx-auto hover:bg-[#3a3a33] transition-colors">
-                            <span className="truncate">Get in Touch</span>
+                            <span className="truncate">Explore Our Services</span>
                         </button>
                     </Link>
                 </section>
